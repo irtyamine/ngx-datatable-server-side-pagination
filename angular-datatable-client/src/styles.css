@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@swimlane/ngx-datatable/release/index.css';
+@import '~@swimlane/ngx-datatable/release/themes/material.css';
+@import '~@swimlane/ngx-datatable/release/assets/icons.css';
+
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+
+html, body { height: 100%; 	font-size: 14px;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.text-on-pannel {
+    background: #fff none repeat scroll 0 0;
+    height: auto;
+    margin-left: 20px;
+    padding: 3px 5px;
+    position: absolute;
+    margin-top: -47px;
+    border: 1px solid #337ab7;
+    border-radius: 8px;
+    font-size: 22px;
+  }
+  
+  .panel {
+    /* for text on pannel */
+    margin-top: 27px !important;
+  }
+  
+  .panel-body {
+    padding-top: 30px !important;
+  }
+
+  .borderOutline {
+    border-style: solid;
+    border-width: 5px;
+  }
+
+.dataLabel {
+    font-family: Verdana;
+    font-size: 12px;
+    color: Background;
+    font-weight: normal;
+}
