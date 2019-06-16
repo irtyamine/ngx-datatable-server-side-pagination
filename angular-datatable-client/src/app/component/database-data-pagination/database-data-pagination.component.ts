@@ -99,5 +99,5 @@ export class DatabaseDataPaginationComponent implements OnInit {
     // Whenever the filter changes, always go back to the first page
     this.page.pageNumber = 0;
   }
-
+  
 }

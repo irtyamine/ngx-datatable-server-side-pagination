@@ -1,6 +1,6 @@
 
 <div class="container">
-         <input
+      <input
         type="text"
         style="padding:8px;margin:15px auto;width:25%;"
         placeholder="Name Filter..."
@@ -24,10 +24,11 @@
         placeholder="Population Filter..."
         (keyup)="populationFilter($event)"
       />
+     
 <ngx-datatable
 class="material striped"
 [rows]="rows"
-[columns]="[{name:'ID'},{name:'Name'},{name:'Country Code'},{name:'District'},{name:'Population'}]"
+[columns]="[{name:'Name'},{name:'Country Code'},{name:'District'},{name:'Population'}]"
 [columnMode]="'force'"
 [headerHeight]="50"
 [footerHeight]="50"
