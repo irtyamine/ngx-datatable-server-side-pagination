@@ -16,6 +16,12 @@ export class DatabaseDataPaginationComponent implements OnInit {
 
   allEmployee: any;
   temp = [];
+  columns = [
+    { name: 'Name' },
+    { name: 'Country Code' },
+    { name: 'District' },
+    { name: 'Population' }
+  ]
 
   constructor(private paginationService: PaginationService, private http: HttpDataService) {
     this.page.pageNumber = 0;
@@ -33,7 +39,6 @@ export class DatabaseDataPaginationComponent implements OnInit {
       (err) => { },
       () => { }
     );
-
   }
 
   /**
@@ -47,12 +52,12 @@ export class DatabaseDataPaginationComponent implements OnInit {
       this.rows = pagedData.data;
     });
   }
-    nameFilter(event) {
+  nameFilter(event) {
     const val = event.target.value.toLowerCase();
 
     // filter our data
     const temp = this.temp.filter(function (d) {
-     return d.name.toLowerCase().indexOf(val) !== -1 || !val;
+      return d.name.toLowerCase().indexOf(val) !== -1 || !val;
     });
 
     // update the rows
@@ -99,5 +104,5 @@ export class DatabaseDataPaginationComponent implements OnInit {
     // Whenever the filter changes, always go back to the first page
     this.page.pageNumber = 0;
   }
-  
+
 }

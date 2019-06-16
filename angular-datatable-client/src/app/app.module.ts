@@ -13,6 +13,7 @@ import { FooterTemplateComponent } from './component/footer-template/footer-temp
 import { DatabaseDataPaginationComponent } from './component/database-data-pagination/database-data-pagination.component';
 import { HttpDataService } from './service/http-data.service';
 import { HttpClientModule } from '@angular/common/http';
+import { CheckBoxComponent } from './component/check-box/check-box.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
    LoadingbarDatableComponent,
    FooterTemplateComponent,
    DatabaseDataPaginationComponent,
+   CheckBoxComponent,
    
  
   ],
