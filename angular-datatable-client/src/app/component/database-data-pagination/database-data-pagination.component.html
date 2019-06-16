@@ -1,5 +1,29 @@
 
 <div class="container">
+         <input
+        type="text"
+        style="padding:8px;margin:15px auto;width:25%;"
+        placeholder="Name Filter..."
+        (keyup)="nameFilter($event)"
+      />
+      <input
+        type="text"
+        style="padding:8px;margin:15px auto;width:25%;"
+        placeholder="Country Code Filter..."
+        (keyup)="countryCodeFilter($event)"
+      />
+      <input
+        type="text"
+        style="padding:8px;margin:15px auto;width:25%;"
+        placeholder="District Filter...."
+        (keyup)="districtFilter($event)"
+      />
+      <input
+        type="text"
+        style="padding:8px;margin:15px auto;width:25%;"
+        placeholder="Population Filter..."
+        (keyup)="populationFilter($event)"
+      />
 <ngx-datatable
 class="material striped"
 [rows]="rows"
