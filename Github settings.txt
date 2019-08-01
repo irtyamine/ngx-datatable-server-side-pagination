@@ -1,0 +1,142 @@
+Download Git.exe , install it, move to C:\Program Files\Git\bin\git.exe......copy the path of git.exe and paste into environment in 
+Path:C:\Program Files\Git\bin;
+
+in order to sync your project folder with github kindly run 
+
+C:\Users\BMS\Desktop\New folder] git config --global user.email "balmukunds@insolutionsglobal.com" 
+C:\Users\BMS\Desktop\New folder] git config --global user.name "balmukund2908"
+
+C:\Users\BMS\Desktop\New folder] git config --global user.email "balmukund.singh241@gmail.com" 
+C:\Users\BMS\Desktop\New folder] git config --global user.name "bms241093"
+>>>>>>> 76f7246ae1ec2e51771a9c4803aefea54001465a
+
+---------------------------------TO clone Github repository to your machine-------------------------------------
+
+C:\Users\BMS\Desktop\New folder] git init
+C:\Users\BMS\Desktop\New folder] git remote add origin https://github.com/bms241093/JavaProject.git
+C:\Users\BMS\Desktop\New folder] git remote show origin
+C:\Users\BMS\Desktop\New folder] git pull --rebase origin master
+----------------------------------------cloning completed-------------------------------------------------------
+
+------------------------------------To commit existing Workspace-------------------------------------------------
+
+C:\Users\BMS\Desktop\New folder] git config --global user.email "balmukund.singh241@gmail.com" 
+C:\Users\BMS\Desktop\New folder] git config --global user.name "bms241093"
+C:\Users\BMS\Desktop\New folder] git init
+C:\Users\BMS\Desktop\New folder] git remote add origin https://github.com/bms241093/JavaProject.git
+C:\Users\BMS\Desktop\New folder] git add .
+C:\Users\BMS\Desktop\New folder] git commit -m "First time committing" . 
+C:\Users\BMS\Desktop\New folder] git pull --rebase origin master
+C:\Users\BMS\Desktop\New folder] git push -u origin master
+------------------------------------To commit exisiting files after modifying-----------------------------------
+
+C:\Users\BMS\Desktop\New folder] git status
+C:\Users\BMS\Desktop\New folder] git remote add origin https://github.com/bms241093/JavaProject.git
+C:\Users\BMS\Desktop\New folder] git add .
+C:\Users\BMS\Desktop\New folder] git commit -m "First time committing" . 
+C:\Users\BMS\Desktop\New folder] git push -u origin master
+
+-------------------------------------To deal with conflicts files------------------------------------------------
+When u see your conflicts in STS , kinldy open git bash, you cannot merge files without commiting
+C:\Users\BMS\Desktop\New folder] git add .
+C:\Users\BMS\Desktop\New folder] git commit -m "Merging conflicts" Note: . is not required here
+C:\Users\BMS\Desktop\New folder] git pull                                 | git pull 
+Note:Automatic merge failed; fix conflicts and then commit the result.    | Already up to date.
+                                                                          | git push -u origin master
+
+-----------Now open STS and see synchronise with repository, conflicts were gone now----------------------------
+
+C:\Users\BMS\Desktop\New folder] git add .
+C:\Users\BMS\Desktop\New folder] git commit -m "Merging conflicts" Note: . is not required here
+C:\Users\BMS\Desktop\New folder] git push -u origin master 
+
+
+#In order to know how many are new files that are not commited
+C:\Users\BMS\Desktop\New folder] git status
+
+#To recover same file which as earlier commited then             |  TO recover all files from GitHub
+C:\Users\BMS\Desktop\New folder]git checkout file_name.html      |   git checkout -f  
+
+#TO check last 5 commits 
+C:\Users\BMS\Desktop\New folder]git log -p -5
+
+#To see the difference in files                  | to compare last commit with staging area
+C:\Users\BMS\Desktop\New folder] git diff        | git diff --staged
+
+#To commit files directly without adding to te staged area
+C:\Users\BMS\Desktop\New folder] git commit -a -m "Commit message"
+
+#To remove files from staging area after adding to staged area
+C:\Users\BMS\Desktop\New folder] git rm --cached file_name.html
+
+#To remove folder from staging area after adding to staged area
+C:\Users\BMS\Desktop\New folder] git rm --cached -r folder_name
+
+#To delete files from localrepo and staging area
+C:\Users\BMS\Desktop\New folder] git rm file_name.html
+
+#to add all files use dot(.)
+C:\Users\BMS\Desktop\New folder]git add .  |  git add -A
+
+#After adding see status
+C:\Users\BMS\Desktop\New folder] git status -s | git status
+
+#Now commit files after adding on github use dot(.)
+C:\Users\BMS\Desktop\New folder] git commit -m "First time committing" . 
+
+
+C:\Users\BMS\Desktop\New folder] git remote add origin https://github.com/bms241093/JavaProject.git
+C:\Users\BMS\Desktop\New folder] git push -u origin master
+
+#failed to push some refs to 'https //github.com/
+C:\Users\BMS\Desktop\New folder] git pull --rebase origin master
+C:\Users\BMS\Desktop\New folder] git push -u origin master
+
+git pull --rebase origin master
+git push origin master
+
+
+---------------------------------Jenkins will build my project---------------------------------
+#TO build project using cmd
+E:\0_STS_Eclipse_workspace\restful-web-services\restful-web-services]mvn -version
+E:\0_STS_Eclipse_workspace\restful-web-services\restful-web-services]mvn install        Note: wait till SUCCESS message appears
+
+#Your Jar file location will appear in console
+C:\Users\BMS\.m2\repository\org\rest\webservices\restful-web-services\0.0.1-SNAPSHOT\
+
+
+#Add maven project from SVN or github
+
+Error: Failed to connect to repository : Error performing command: git.exe ls-remote -h
+go to C:\Program Files\Git\bin\git.exe  copy the path and put into jenkins global configuration for Git
+
+-------------Build ----------Inside project configuration
+Root POM:pom.xml
+Goals: install
+
+
+
+
+
+-----------------------------------------Linus command for slave------------------
+PC Login for Ubuntu
+bms
+Asdf@1234
+
+
+ssh
+ssh localhost
+ssh apt-get install openssh-server
+sudo service ssh status
+
+#TO change your port in linux
+sudo gedit /etc/ssh/sshd_config
+
+to get IP adress
+ifconfig  ==> inet addr:10.0.2.15
+ 
+
+
+
+
+
